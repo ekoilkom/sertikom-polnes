@@ -26,4 +26,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/me', [\App\Http\Controllers\AuthApiController::class,'getAuthenticatedUser']);
 
     Route::post('/auth/logout', [\App\Http\Controllers\AuthApiController::class, 'logout']);
+
+    Route::resource('berita',\App\Http\Controllers\API\BeritaAPIControlller::class);
 });
